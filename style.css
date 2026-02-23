@@ -1,0 +1,31 @@
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  padding-top: 80px; /* for fixed navbar */
+  background: linear-gradient(
+    rgba(13, 60, 120, 0.85),
+    rgba(13, 60, 120, 0.85)
+  );
+}
+
+/* HERO TEXT */
+.hero h1 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CARD IMAGES */
+.card img {
+  height: 230px;
+  object-fit: cover;
+}
