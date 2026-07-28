@@ -3,101 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <title>Shree Pragati English Boarding School | Belbari, Morang</title>
+  <meta name="description" content="Shree Pragati English Boarding School in Belbari, Morang — quality education, discipline and character, built together.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<nav class="navbar-custom">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Shree Pragati English Boarding School</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SP</span>
+      Shree Pragati English<br>Boarding School
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+    <ul class="nav-links">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
-<!-- HERO SECTION -->
-<section class="hero text-white d-flex align-items-center text-center">
+<!-- HERO -->
+<section class="hero">
   <div class="container">
-    <h1 class="display-4 fw-bold mb-3">
-      Welcome to Shree Pragati English Boarding School
-    </h1>
-    <p class="lead mb-4">
-      A place where knowledge, discipline, and character are built together.<br>
-      We provide quality education in a safe and supportive environment.<br>
-      Academic excellence, moral values, and personality development are our focus.
+    <span class="hero-eyebrow">Belbari, Morang · Est. Community School</span>
+    <h1>Where knowledge, discipline<br>and <span class="annotate-underline">character</span> are built together</h1>
+    <p class="hero-lead">
+      We provide quality education in a safe, supportive environment —
+      academic excellence, moral values and personality development,
+      so every student leaves ready to lead.
     </p>
-    <p class="lead mb-4">
-      Our goal is to prepare students to become responsible and successful citizens.
-    </p>
-    <p class="fw-semibold">Belbari, Morang</p>
-    <a href="admissions.html" class="btn btn-warning btn-lg mt-3">
-      Admissions Open
-    </a>
+    <div class="hero-location">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+      Belbari, Morang
+    </div>
+    <div>
+      <a href="contact.html" class="btn-cta">
+        Admissions Open
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>Belbari-6</b><span>Somabare, Morang</span></div>
+      <div class="hero-stat"><b>Sun–Fri</b><span>9 AM – 5 PM</span></div>
+      <div class="hero-stat"><b>K–10</b><span>Full curriculum</span></div>
+    </div>
   </div>
 </section>
 
-<!-- EVENTS -->
-<section class="py-5">
+<!-- EVENTS PREVIEW -->
+<section class="page-section ruled">
   <div class="container">
-    <h2 class="text-center mb-4">Recent Events</h2>
-    <div class="row g-4">
+    <div class="center">
+      <span class="section-eyebrow">a page from our calendar</span>
+      <h2 class="section-title">Recent Events</h2>
+      <svg class="doodle-underline" viewBox="0 0 92 12" fill="none"><path d="M2 9c14-6 26-6 40-2 12 3 26 3 48-4" stroke="#C0392B" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </div>
 
-      <div class="col-md-4">
-        <div class="card shadow">
-          <img src="assets/images/sports-week/1.jpg" class="card-img-top" alt="Sports Week">
-          <div class="card-body text-center">
-            <h5>Sports Week</h5>
-            <p>Building strength and teamwork</p>
-          </div>
+    <div class="grid grid-3">
+      <div class="card-index reveal">
+        <span class="stamp">A+</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6-4.6-4.1 6.1-.6L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
         </div>
+        <h5>Sports Week</h5>
+        <p>Building strength and teamwork through a full week of athletics, races and team games.</p>
       </div>
 
-      <div class="col-md-4">
-        <div class="card shadow">
-          <img src="assets/images/saraswati-puja/1.jpg" class="card-img-top" alt="Saraswati Puja">
-          <div class="card-body text-center">
-            <h5>Saraswati Puja</h5>
-            <p>Celebration of knowledge</p>
-          </div>
+      <div class="card-index reveal">
+        <span class="stamp">★</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3v6M12 9c-3 0-5 2-5 5v7h10v-7c0-3-2-5-5-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 15h10" stroke="currentColor" stroke-width="1.6"/></svg>
         </div>
+        <h5>Saraswati Puja</h5>
+        <p>A celebration of knowledge — students and teachers honour the goddess of learning together.</p>
       </div>
 
-      <div class="col-md-4">
-        <div class="card shadow">
-          <img src="assets/images/annual-function/1.jpg" class="card-img-top" alt="Annual Function">
-          <div class="card-body text-center">
-            <h5>Annual Function</h5>
-            <p>Cultural excellence of students</p>
-          </div>
+      <div class="card-index reveal">
+        <span class="stamp">✓</span>
+        <div class="card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 8l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 8v6c0 2 3.6 4 8 4s8-2 8-4V8" stroke="currentColor" stroke-width="1.6"/></svg>
         </div>
+        <h5>Annual Function</h5>
+        <p>Cultural excellence on display — music, dance and drama performed by our students.</p>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- VALUES STRIP -->
+<section class="value-strip">
+  <div class="container" style="max-width:1140px;margin:0 auto;padding:0 1.25rem;">
+    <div class="grid grid-3">
+      <div>
+        <h3>Discipline</h3>
+        <span>Structure that students carry for life</span>
+      </div>
+      <div>
+        <h3>Character</h3>
+        <span>Moral values alongside academics</span>
+      </div>
+      <div>
+        <h3>Excellence</h3>
+        <span>Preparing responsible citizens</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-  <p class="mb-0">© 2026 Shree Pragati English Boarding School, Belbari</p>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-col" style="max-width:280px;">
+      <div class="footer-brand">Shree Pragati English<br>Boarding School</div>
+      <p style="font-size:0.9rem;color:rgba(250,246,236,0.6);line-height:1.6;">Quality education in a safe and supportive environment, in Belbari, Morang.</p>
+    </div>
+    <div class="footer-col">
+      <h6>Explore</h6>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h6>Reach Us</h6>
+      <a href="tel:+9779842185842">+977-9842185842</a>
+      <a href="mailto:ebspragati@gmail.com">ebspragati@gmail.com</a>
+      <a href="contact.html">Belbari - 6, Somabare, Morang</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Shree Pragati English Boarding School, Belbari</div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
