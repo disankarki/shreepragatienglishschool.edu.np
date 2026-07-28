@@ -434,6 +434,135 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================================
+   GALLERY (scrapbook of polaroid tiles)
+   ========================================================= */
+.scrapbook {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .scrapbook { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .scrapbook { grid-template-columns: 1fr; }
+}
+
+.polaroid {
+  background: var(--white);
+  padding: 0.85rem 0.85rem 1.3rem;
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(15,35,56,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, z-index 0s;
+}
+
+.polaroid:nth-child(4n+1) { transform: rotate(-2.4deg); }
+.polaroid:nth-child(4n+2) { transform: rotate(1.6deg); }
+.polaroid:nth-child(4n+3) { transform: rotate(-1.2deg); }
+.polaroid:nth-child(4n+4) { transform: rotate(2.2deg); }
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 20px 38px -14px rgba(15,35,56,0.35);
+  z-index: 5;
+}
+
+.polaroid:focus-visible {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 5;
+}
+
+.tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 64px;
+  height: 22px;
+  background: rgba(232, 163, 61, 0.55);
+  border: 1px solid rgba(198, 129, 31, 0.3);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+.polaroid-photo {
+  aspect-ratio: 4 / 3;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.92);
+  overflow: hidden;
+}
+
+.polaroid-caption {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  color: var(--ink);
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 35, 56, 0.82);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox-inner {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 1.75rem;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+}
+
+.lightbox-photo {
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.92);
+}
+
+.lightbox-caption {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--ink);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
    FACILITIES LIST (about page)
    ========================================================= */
 .facility-row {
