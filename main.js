@@ -59,11 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var lbClose = lightbox.querySelector(".lightbox-close");
 
     function openLightbox(el) {
-      var bg = el.querySelector(".polaroid-photo").style.background;
-      var icon = el.querySelector(".polaroid-photo").innerHTML;
+      var photoEl = el.querySelector(".polaroid-photo");
       var caption = el.querySelector(".polaroid-caption").textContent;
-      lbPhoto.style.background = bg;
-      lbPhoto.innerHTML = icon;
+      lbPhoto.setAttribute("style", photoEl.getAttribute("style") || "");
+      lbPhoto.innerHTML = photoEl.innerHTML;
       lbCaption.textContent = caption;
       lightbox.classList.add("open");
     }
