@@ -326,13 +326,19 @@ h1, h2, h3, h4 {
 }
 
 .page-section.ruled {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 43px,
-    var(--cream-line) 44px
-  );
-  background-position: 0 100px;
+  background-color: var(--cream);
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 43px,
+      var(--cream-line) 44px
+    ),
+    linear-gradient(rgba(250,246,236,0.7), rgba(250,246,236,0.76)),
+    url("recent-events-bg.jpg");
+  background-size: auto, cover, cover;
+  background-position: 0 100px, center, center 35%;
+  background-repeat: repeat, no-repeat, no-repeat;
 }
 
 .page-section.tinted { background: var(--paper-edge); }
