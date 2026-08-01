@@ -339,7 +339,7 @@ h1, h2, h3, h4 {
 
 #recent-events-section {
   background:
-    linear-gradient(rgba(250,246,236,0.82), rgba(250,246,236,0.86)),
+    linear-gradient(rgba(250,246,236,0.62), rgba(250,246,236,0.68)),
     url("recent-events-bg.jpg");
   background-size: cover;
   background-position: center 35%;
