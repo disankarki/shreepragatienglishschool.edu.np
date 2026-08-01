@@ -31,6 +31,7 @@
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+html, body { max-width: 100%; overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -39,6 +40,7 @@ body {
   color: var(--ink);
   background: var(--cream);
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 a { text-decoration: none; }
@@ -834,8 +836,55 @@ a:focus-visible, button:focus-visible {
     padding: 0.5rem 1.25rem 1.25rem;
     display: none;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
   }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; flex-shrink: 0; }
+
+  /* Navbar: keep brand + toggle from ever overflowing on narrow phones */
+  .navbar-custom .container { padding: 0 1rem; gap: 0.5rem; }
+  .brand { font-size: 0.92rem; gap: 0.5rem; min-width: 0; }
+  .brand-mark { width: 34px; height: 34px; }
+
+  /* Hero: less dead space on short phone screens */
+  .hero { min-height: auto; padding-top: 84px; padding-bottom: 3rem; }
+  .hero h1 { margin-bottom: 1rem; }
+  .hero-stats { gap: 1.5rem 2rem; margin-top: 2rem; }
+  .hero-location { font-size: 1.25rem; }
+
+  /* Inner page headers */
+  .page-header { padding: 6.5rem 0 2.75rem; }
+
+  /* Section rhythm */
+  .page-section { padding: 3.25rem 0; }
+  .page-section.ruled .container::before { display: none; }
+
+  /* Cards and photo tiles */
+  .card-index { padding: 1.5rem 1.25rem; }
+  .card-photo { margin: -1.5rem -1.25rem 1rem; width: calc(100% + 2.5rem); }
+  .contact-card { padding: 1.75rem 1.5rem; }
+
+  /* Scrapbook: calmer on a single column, still charming */
+  .polaroid { transform: none !important; }
+  .polaroid:hover, .polaroid:focus-visible { transform: scale(1.02) !important; }
+
+  /* Lightbox fits narrow viewports without edge-to-edge cramping */
+  .lightbox { padding: 1rem; }
+  .lightbox-inner { padding: 1rem 1rem 1.25rem; }
+  .lightbox-close { top: 1rem; right: 1rem; width: 36px; height: 36px; }
+
+  /* Long contact strings never force horizontal scroll */
+  .contact-row p, .contact-row a { word-break: break-word; }
+
+  /* Footer stacks cleanly and stays left-aligned */
+  .site-footer .container { flex-direction: column; gap: 2rem; }
+  .footer-col { width: 100%; }
+}
+
+@media (max-width: 380px) {
+  .brand { font-size: 0.82rem; }
+  .brand-mark { width: 30px; height: 30px; }
+  .hero-eyebrow { font-size: 0.72rem; }
 }
