@@ -95,8 +95,28 @@ h1, h2, h3, h4 {
   color: var(--cream);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.35rem;
   line-height: 1.2;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  white-space: nowrap;
+}
+
+.brand-sub {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--marigold);
   white-space: nowrap;
 }
 
@@ -868,7 +888,9 @@ a:focus-visible, button:focus-visible {
 
   /* Navbar: keep brand + toggle from ever overflowing on narrow phones */
   .navbar-custom .container { padding: 0 1rem; gap: 0.5rem; }
-  .brand { font-size: 1.05rem; gap: 0.55rem; min-width: 0; white-space: normal; }
+  .brand { gap: 0.55rem; min-width: 0; }
+  .brand-title { font-size: 1.05rem; white-space: normal; }
+  .brand-sub { font-size: 0.62rem; white-space: normal; }
   .brand-mark { width: 40px; height: 40px; }
 
   /* Hero: less dead space on short phone screens */
@@ -907,7 +929,8 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (max-width: 380px) {
-  .brand { font-size: 0.92rem; }
+  .brand-title { font-size: 0.92rem; }
+  .brand-sub { font-size: 0.56rem; }
   .brand-mark { width: 36px; height: 36px; }
   .hero-eyebrow { font-size: 0.72rem; }
 }
