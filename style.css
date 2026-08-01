@@ -176,7 +176,7 @@ h1, h2, h3, h4 {
   position: relative;
   background:
     radial-gradient(ellipse at 15% 15%, rgba(232,163,61,0.16), transparent 45%),
-    linear-gradient(160deg, rgba(15,35,56,0.62) 0%, rgba(22,50,79,0.58) 55%, rgba(31,63,96,0.52) 100%),
+    linear-gradient(160deg, rgba(15,35,56,0.78) 0%, rgba(22,50,79,0.74) 55%, rgba(31,63,96,0.68) 100%),
     url("hero-bg.jpg");
   background-size: cover;
   background-position: center 30%;
@@ -200,15 +200,9 @@ h1, h2, h3, h4 {
 .hero .container {
   position: relative;
   z-index: 2;
-  max-width: 860px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 2.75rem 2rem;
-  background: rgba(15, 35, 56, 0.42);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 20px;
-  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.35);
+  padding: 0 1.25rem;
 }
 
 .hero-eyebrow {
@@ -871,7 +865,6 @@ a:focus-visible, button:focus-visible {
 
   /* Hero: less dead space on short phone screens */
   .hero { min-height: auto; padding-top: 84px; padding-bottom: 3rem; }
-  .hero .container { padding: 1.75rem 1.25rem; border-radius: 16px; }
   .hero h1 { margin-bottom: 1rem; }
   .hero-stats { gap: 1.5rem 2rem; margin-top: 2rem; }
   .hero-location { font-size: 1.25rem; }
