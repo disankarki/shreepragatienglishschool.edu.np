@@ -331,6 +331,15 @@ h1, h2, h3, h4 {
 
 .page-section.tinted { background: var(--paper-edge); }
 
+#recent-events-section {
+  background:
+    linear-gradient(rgba(250,246,236,0.94), rgba(250,246,236,0.94)),
+    url("recent-events-bg.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+}
+
 .page-section .container {
   max-width: 1140px;
   margin: 0 auto;
